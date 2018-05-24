@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Footy Score Keeper</string>
+    <string name="Team_A">Team A</string>
+    <string name="Team_B">Team B</string>
+
+    <string name="score_0">0</string>
+
+    <string name="increase">+ 1</string>
+    <string name="decrease">- 1</string>
+
+    <string name="reset">reset</string>
+
+    <!-- Toast for negative score-->
+    <string name="negative_score">Cannot have negative score</string>
+
+    <!-- Timer Buttons-->
+    <string name="start_time">start</string>
+    <string name="pause_time">pause</string>
+    <string name="reset_time">reset</string>
+
+
+</resources>

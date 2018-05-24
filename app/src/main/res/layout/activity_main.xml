@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+
+    tools:context="com.viralandroid.footyscorekeeper.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:alpha="0.8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wooden_futsal_floor" />
+
+
+    <Chronometer
+        android:id="@+id/timer"
+        style="@style/score_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="30dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/time_buttons"
+       >
+        <Button
+            style="@style/button_style"
+            android:onClick="startTime"
+            android:text="@string/start_time"/>
+
+        <Button
+          style="@style/button_style"
+            android:onClick="pauseTime"
+            android:text="@string/pause_time"/>
+
+        <Button
+            style="@style/button_style"
+            android:onClick="resetTime"
+            android:text="@string/reset_time"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#455A64"
+        android:layout_below="@id/time_buttons"
+
+        android:id="@+id/view" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:id="@+id/linearLayout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/Team_A"
+         />
+        <TextView
+            android:id="@+id/score_A"
+            android:text="@string/score_0"
+            style="@style/score_style"/>
+
+
+        <Button
+            style="@style/plus_one"
+            android:onClick="addToTeamA"
+            android:text="@string/increase"/>
+
+    <Button
+        style="@style/minus_one"
+        android:onClick="subtractTeamA"
+        android:text="@string/decrease"
+
+
+        />
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginTop="18dp"
+            android:background="#455A64" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/Team_B"
+            />
+
+        <TextView
+            android:id="@+id/score_B"
+            android:text="@string/score_0"
+            style="@style/score_style"
+
+            />
+        <Button
+            style="@style/plus_one"
+            android:onClick="addToTeamB"
+            android:text="@string/increase"/>
+
+        <Button
+            style="@style/minus_one"
+            android:onClick="subtractTeamB"
+            android:text="@string/decrease"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:onClick="reset"
+        android:textColor="#ffffff"
+        android:text="@string/reset"
+
+        />
+
+
+
+</RelativeLayout>
